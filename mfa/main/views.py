@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import DetailView
 
-from .models import Moloko, Yaico
+from .models import Moloko, Yaico, Ourdt
 
 
 def test_view(request):
@@ -29,5 +29,5 @@ class ProductDetailView(DetailView):
 
 
 def ourdt(request):
-
-    return render(request, 'ourdt.html')
+    comandaDTs = Ourdt.objects.all()
+    return render(request, 'ourdt.html', {'comandaDTs': comandaDTs})

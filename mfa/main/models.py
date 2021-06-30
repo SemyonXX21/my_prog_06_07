@@ -2,7 +2,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.contrib.contenttypes.models import ContentType
-from django.contrib.contenttypes.fields import GenericForeignKey
+#from django.contrib.contenttypes.fields import GenericForeignKey
 from django.urls import reverse
 
 User = get_user_model()
@@ -91,6 +91,7 @@ class Yaico(Product):
 
 
 class Ourdt(models.Model):
+
 
     title = models.CharField(max_length=255, verbose_name='Наименование')
     image = models.ImageField(verbose_name='Изображение')
