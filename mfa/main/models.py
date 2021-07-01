@@ -100,3 +100,16 @@ class Ourdt(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Lucoshko(models.Model):
+
+    name = models.CharField('Имя', max_length=100)
+    telephone = models.CharField('Телефон', max_length=100)
+    address = models.CharField('Адрес', max_length=100)
+    product = models.CharField('Продукт', max_length=100)
+    quantity = models.CharField('Количество', max_length=100)
+
+    def __str__(self):
+        return self.name
+

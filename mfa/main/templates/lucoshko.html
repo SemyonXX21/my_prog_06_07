@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1> Мой заказ </h1>
+  <form  method="post">
+    {% csrf_token%}
+    {{form.name}}<br>
+    {{form.telephone}}<br>
+    {{form.address}}<br>
+    {{form.product}}<br>
+    {{form.quantity}}<br>
+    
+    <button type ="submit" class="btn btn-success">Положить в лукошко </button>
+     <span>{{ error }}</span>
+
+  </form>
+
+{% endblock content %}
