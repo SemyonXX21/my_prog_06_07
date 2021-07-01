@@ -97,5 +97,6 @@ class Ourdt(models.Model):
     image = models.ImageField(verbose_name='Изображение')
     description = models.TextField(verbose_name='Описание', null=True)
 
+
     def __str__(self):
         return self.title

@@ -30,4 +30,5 @@ class ProductDetailView(DetailView):
 
 def ourdt(request):
     comandaDTs = Ourdt.objects.all()
+
     return render(request, 'ourdt.html', {'comandaDTs': comandaDTs})
