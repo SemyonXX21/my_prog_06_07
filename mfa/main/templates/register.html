@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="d-flex justify-content-center h-100">
+    <div class="user_card">
+        <div class ="container h-100">
+             <div class="d-flex justify-content-center">
+                    <h3 id="form-title">Регистрация</h3>
+             </div>
+            <div class = "d-flex justiry-content-center h-200">
+
+                <form method="post" action="">
+                    {% csrf_token %}
+
+                    <p>{{form.username.label}} {{form.username}} </p>
+                    <p>{{form.email.label}} {{form.email}} </p>
+                    <p>{{form.password1.label}} {{form.password1}} </p>
+                    <p>{{form.password2.label}} {{form.password2}} </p>
+                    <div class="d-flex justify-content-center mt-3 login_container">
+                    <input type="submit" value="Регистрировать" class="btn btn-primary">
+                 </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

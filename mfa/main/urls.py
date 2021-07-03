@@ -6,4 +6,5 @@ urlpatterns = [
     path('<str:ct_model>/<slug>/', ProductDetailView.as_view(), name='product_detail'),
     path('ourdt', ourdt, name='ourdt'),
     path('lucoshko', lucoshko, name='lucoshko'),
+
 ]

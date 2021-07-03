@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic import DetailView
+from django.contrib.auth.decorators import login_required
 
 from .models import Moloko, Yaico, Ourdt
 from .forms import LucoshkoForm
@@ -32,7 +33,7 @@ def ourdt(request):
 
     return render(request, 'ourdt.html', {'comandaDTs': comandaDTs})
 
-
+@login_required(login_url= 'login')
 def lucoshko(request):
     error = ''
     if request.method == 'POST':
@@ -42,9 +43,6 @@ def lucoshko(request):
             return redirect('base')
         else:
             error ='Неверно введено '
-
-
-
 
     form = LucoshkoForm()
     context = {
